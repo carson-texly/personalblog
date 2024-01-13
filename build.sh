@@ -5,7 +5,7 @@ cd ../posts
 #build index.md
 rm index.md
 touch index.md
-echo "# Posts" >> index.md
+echo "# Lazy SWE" >> index.md
 echo "@todo write a slogan" >> index.md
 echo "" >> index.md
 for f in *.md; do

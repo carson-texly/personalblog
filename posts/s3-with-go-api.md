@@ -1,5 +1,3 @@
-# Svelte,Gin,AWS S3, MongoDB
+# gin file uploads
 
-I've been working on an application portal for an undergraduate research grant recently,
-and as I love to overengineer stuff, here's how a little look under the hood at the system I
-came up with to attach file uploads to your application.
+Recently I wrote a file upload function for a web app. My stack was svelte, go on AWS with a mongodb database

@@ -1,4 +1,4 @@
-# Posts
+# Lazy SWE
 @todo write a slogan
 
 [index](https://blog.carson-cummins.com/index.html)  
