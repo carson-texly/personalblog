@@ -44,5 +44,8 @@ echo "okie dokie!"
 
 Then wire up github pages (it's just making a CNAME DNS record) to make your blog live
 
-ps.
+ps  
 all the html renders in to the /docs folder, so make sure you set your pages site to serve from there.
+
+pps.  
+you also need [pandoc](https://pandoc.org/installing.html) installed
