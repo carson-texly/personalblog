@@ -1,1 +1,4 @@
-[Test](https://blog.carson-cummins.com/test.html)
+# Posts
+
+[index.md](https://blog.carson-cummins.comindex.html)
+[test.md](https://blog.carson-cummins.comtest.html)
