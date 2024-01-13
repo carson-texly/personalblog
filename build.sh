@@ -5,8 +5,8 @@ cd ../posts
 #build index.md
 rm index.md
 touch index.md
-echo "# Recipes" >> index.md
-echo "the quickest and easiest recipes i've found for making common software" >> index.md
+echo "# Posts" >> index.md
+echo "my scattered thoughts on software" >> index.md
 echo "" >> index.md
 for f in *.md; do
     echo "[${f%.md}](https://blog.carson-cummins.com/${f%.md}.html)  " >> index.md
