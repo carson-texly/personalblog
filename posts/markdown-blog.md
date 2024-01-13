@@ -42,4 +42,4 @@ echo $number > $FILE
 echo "okie dokie!"
 ```
 
-Then wire up github pages (it's just making a CNAME DNS record), and your blog will be live!
+Then wire up github pages (it's just making a CNAME DNS record) to make your blog live
