@@ -9,6 +9,8 @@ echo "# Posts" >> index.md
 echo "" >> index.md
 for f in *.md; do
     echo "[$f](https://blog.carson-cummins.com/${f%.md}.html)" >> index.md
+done
+for f in *.md; do
     pandoc --standalone $f > ../docs/${f%.md}.html
 done
 cd ..
