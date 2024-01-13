@@ -1,8 +1,8 @@
 # markdown blog
 
-This website is made with the easiest way to freely host a blog I could think of - it took me maybe 20 minutes to set up. It's a github pages site, rendering from the /docs folder of a repo containing all of the post markdown folder and a single bash file to build/deploy the site. Attaching the bash script below in case someone wants to use it. First create the following folder structure:
+This website is made with the easiest way to freely host a blog I could think of - it took me maybe 20 minutes to set up. It's a github pages site, rendering from the /docs folder of a repo containing all of the post markdown and a single bash file to build/deploy the site. Attaching the bash script below in case someone wants to use it. First create the following folder structure:
 
-docs  
+docs
 --CNAME  
 posts  
 --post1.md  
@@ -43,3 +43,6 @@ echo "okie dokie!"
 ```
 
 Then wire up github pages (it's just making a CNAME DNS record) to make your blog live
+
+ps.
+all the html renders in to the /docs folder, so make sure you set your pages site to serve from there.
