@@ -2,12 +2,12 @@
 
 This website is made with the easiest way to freely host a blog I could think of - it took me maybe 20 minutes to set up. It's a github pages site, rendering from the /docs folder of a repo containing all of the post markdown folder and a single bash file to build/deploy the site. Attaching the bash script below in case someone wants to use it. First create the following folder structure:
 
-docs
---CNAME
-posts
---post1.md
---post2.md
---...
+docs  
+--CNAME  
+posts  
+--post1.md  
+--post2.md  
+--...  
 build.sh
 
 Then initialize a git repo there and run build.sh:
