@@ -6,7 +6,7 @@ cd ../posts
 rm index.md
 touch index.md
 echo "# Posts" >> index.md
-echo "my scattered thoughts on software" >> index.md
+echo "@todo write a slogan" >> index.md
 echo "" >> index.md
 for f in *.md; do
     echo "[${f%.md}](https://blog.carson-cummins.com/${f%.md}.html)  " >> index.md

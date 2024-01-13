@@ -171,6 +171,42 @@
 </head>
 <body>
 <h1 id="markdown-blog">markdown blog</h1>
-<p>This is how this website was made.</p>
+<p>This website is made with the easiest way to freely host a blog I
+could think of - it took me maybe 20 minutes to set up. It’s a github
+pages site, rendering from the /docs folder of a repo containing all of
+the post markdown folder and a single bash file to build/deploy the
+site. Attaching the bash script below in case someone wants to use it.
+First create the following folder structure:</p>
+<p>docs –CNAME posts –post1.md –post2.md –… build.sh</p>
+<p>Then initialize a git repo there and run build.sh:</p>
+<pre><code>cd docs
+rm *.html
+cd ../posts
+rm index.md
+touch index.md
+echo &quot;# Posts&quot; &gt;&gt; index.md
+echo &quot;@todo write a slogan&quot; &gt;&gt; index.md
+echo &quot;&quot; &gt;&gt; index.md
+for f in *.md; do
+    echo &quot;[${f%.md}](/${f%.md}.html)  &quot; &gt;&gt; index.md
+done
+for f in *.md; do
+    pandoc --standalone $f -V mainfont=Helvetica &gt; ../docs/${f%.md}.html
+done
+cd ..
+FILE=&quot;commitcount.txt&quot;
+if [ -s $FILE ]; then
+    read -r number &lt; $FILE
+    ((number++))
+else
+    number=1
+fi
+git add .
+git commit -m &quot;[$number] automated build commit&quot;
+git push origin master
+echo $number &gt; $FILE
+echo &quot;okie dokie!&quot;</code></pre>
+<p>Then wire up github pages (it’s just making a CNAME DNS record), and
+your blog will be live!</p>
 </body>
 </html>
