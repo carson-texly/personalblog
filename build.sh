@@ -1,6 +1,6 @@
 #!/bin/bash
 cd docs
-rm *
+rm *.html
 cd ../posts
 #build index.md
 rm index.md
