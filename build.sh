@@ -12,7 +12,7 @@ for f in *.md; do
     echo "[${f%.md}](https://blog.carson-cummins.com/${f%.md}.html)  " >> index.md
 done
 for f in *.md; do
-    pandoc --standalone $f -V mainfont=Helvetica > ../docs/${f%.md}.html
+    pandoc --standalone $f --metadata title=${f%.md} -V mainfont=Helvetica > ../docs/${f%.md}.html
 done
 cd ..
 FILE="commitcount.txt"
