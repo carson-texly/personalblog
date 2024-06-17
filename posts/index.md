@@ -3,3 +3,4 @@
 
 [financialscary](https://blog.carson-cummins.com/financialscary.html)  
 [markdown-blog](https://blog.carson-cummins.com/markdown-blog.html)  
+[paint-by-numbers](https://blog.carson-cummins.com/paint-by-numbers.html)  
