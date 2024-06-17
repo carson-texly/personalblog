@@ -185,11 +185,11 @@ should point out before I start that several much better paint by
 numbers generators exist online (two that I see are <a
 href="https://paint-by-number.com/pages/create-your-own-paint-by-number">here</a>
 and <a href="https://pbnify.com/">here</a>). However, both of these, and
-many other examples online, prescribe color pallettes to you, by
-actively choosing them for you or forcing you to use colors that already
-exist in the image. I already own the paint colors, so that’s not going
-to work great for me. So my ideal solution is just a website that takes
-in my paint colors and an image, and spits out a paint by numbers.</p>
+many other examples online, prescribe color palettes to you, by actively
+choosing them for you or forcing you to use colors that already exist in
+the image. I already own the paint colors, so that’s not going to work
+great for me. So my ideal solution is just a website that takes in my
+paint colors and an image, and spits out a paint by numbers.</p>
 <p>Disclaimer: I’m sure the more data science aware among us could tell
 me a much better algorithm for what I’m about to do, but when it comes
 to learning I’m a big fan of “fuck around and find out” over “read about
@@ -200,7 +200,7 @@ is to let it take in colors and images as inputs. This is a simple
 statement, and HTML makes it even simpler by having native elements for
 color inputs and file uploads. I also pretend to do web dev for a
 living, so I churned that out pretty quick. After a little processing,
-I’m left with a list of 3-tuples representing the color pallette RGB
+I’m left with a list of 3-tuples representing the color palette RGB
 values, and a resource url for the image. I used an image url because I
 figured someone else had already written a lot of the image processing
 routines I was going to need, they’d let me use a resource url to load
@@ -212,7 +212,7 @@ seemed to do what I wanted.</p>
 <p>So now I had an image object that I can do some things to, and a list
 of colors that I want said image to be. At first I tried just making
 each pixel in the image the same color as whatever 3-tuple had the
-closest euclidean distance to it in the color pallette, but that looked
+closest euclidean distance to it in the color palette, but that looked
 really bad. It also didn’t have the classic paint by numbers blobs of
 color, which I could number, hence making it impossible to “paint by
 number”. Forever unwilling to ask the internet, I guessed that blurring
@@ -229,7 +229,7 @@ A normal paint by numbers is a bunch of numbered outlines of blobs on a
 white page, not a finished painting. So I was gonna have to convert the
 finished painting into a bunch of blobs, draw their outlines, and then
 number those blobs according to color. Identifying blobs is actually a
-super huge an important problem in data science called clustering, so
+super huge and important problem in data science called clustering, so
 tons of famous algorithms like k-means, BIRCH, etc having been invented
 to solve it super well. I did not go try and relearn that BS, I was here
 to fuck around, not read about someone else fucking around.</p>
@@ -248,14 +248,14 @@ abusive of all sorts of memory and such, this method was pretty quick to
 write and gave me what I wanted, a way to map each pixel to a specific
 blob it was a part of, and to know that blob was all the same color.</p>
 <p>Now that I’d made all the clusters, and it actually worked decently
-well (to my surprised), I just had to draw outlines and numbers onto a
+well (to my surprise), I just had to draw outlines and numbers onto a
 new image, which would be the final product of my website. This was
 super simple using the cluster map I’d just made, I simply made every
 pixel white in the new image, then made every pixel with a differently
 cluster id-ed neighbor black, which drew outlines pretty easily! I’m
 sure my old topology prof would give me some bs about how this was a bad
 assumption, but stuff seemed to work out. Numbering the clusters turned
-out to be quite a bit more difficult problem than I’d expected, and
+out to be quite a bit more difficult a problem than I’d expected, and
 given that at this point I’d been coding for a few hours I threw in the
 towel and churned out the first solution I could think of.</p>
 <p>Getting the numbers for each blob is easy enough - just take one
