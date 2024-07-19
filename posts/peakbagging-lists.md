@@ -1,10 +1,12 @@
+# Scraping peakbagger.com lists
+
 I just moved to Washington, and peakbagging is pretty big here. Alot of times this takes the form of trying to check off a list of peaks from peakbagger.com. I'm thinking about attempting the [Alpine lakes home court 100](https://www.peakbagger.com/list.aspx?lid=21307), but I'd like to see all the points on a map first, which means a gpx file of waypoints for each peak. Luckily, this is super easy to do! Here's a python script I wrote that does it, feel free to use it (although obviously refrain from scraping more than one list at a time for overuse of API reasons):
 
     import requests
     import re
 
     list_id = 21307
-    
+
     class Peak:
         def __init__(self, name, elevation, latitude, longitude):
             self.name = name
